@@ -3,33 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel Getachew | Portfolio</title>
+    <title>Samuel Getachew | Full Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { scroll-behavior: smooth; background-color: #f8f9fa; }
-        .hero-section { padding: 100px 0; background: #fff; }
-        .nav-bar { position: sticky; top: 0; z-index: 1000; }
-        .card { border: none; transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .icon-img { width: 24px; height: 24px; margin-right: 10px; }
+        body { 
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; 
+            background-color: #fcfcfc; 
+            color: #333;
+        }
+        .hero-section { 
+            padding: 140px 0; 
+            background: linear-gradient(135deg, #ffffff 0%, #f1f4f9 100%); 
+        }
+        .nav-bar { 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .card { 
+            border: 1px solid rgba(0,0,0,0.05); 
+            transition: all 0.3s ease;
+            border-radius: 12px;
+        }
+        .card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08); 
+        }
+        .btn-primary {
+            background-color: #0d6efd;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .btn-outline-dark {
+            border-radius: 8px;
+            padding: 10px 25px;
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: #0d6efd;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-bar">
         <div class="container">
-            <a class="navbar-brand" href="#">Samuel.G</a>
+            <a class="navbar-brand fw-bold" href="#">SAMUEL<span class="text-primary">.G</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about-me">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Hire me</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-sm btn-outline-light" href="path-to-your-cv.pdf" download>
+                            <i class="fas fa-download me-1"></i> CV
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-2"><a class="btn btn-sm btn-primary" href="#contact">Hire Me</a></li>
                 </ul>
             </div>
         </div>
@@ -37,19 +88,24 @@
 
     <section id="home" class="hero-section text-center">
         <div class="container">
-            <img src="sam.png" alt="Samuel" class="rounded-circle mb-3" width="150" height="150" style="object-fit: cover; border: 5px solid #0d6efd;">
-            <h1 class="display-4 fw-bold">Samuel Getachew</h1>
-            <p class="lead text-muted">Full Stack Web Developer @ Meta | Freelancer</p>
+            <img src="sam.png" alt="Samuel" class="rounded-circle mb-4" width="160" height="160" style="object-fit: cover; border: 6px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h1 class="display-3 fw-bold mb-3">Samuel Getachew</h1>
+            <p class="lead text-muted mb-4">Full Stack Web Developer | Mobile App Specialist | Freelancer</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#contact" class="btn btn-primary btn-lg">Start a Project</a>
+                <a href="path-to-your-cv.pdf" class="btn btn-outline-dark btn-lg" download>
+                    <i class="fas fa-file-download me-2"></i>Download CV
+                </a>
+            </div>
         </div>
     </section>
 
     <section id="about-me" class="py-5 bg-white">
         <div class="container">
-            <h2 class="text-center mb-4">About Me</h2>
+            <h2 class="text-center section-title">About Me</h2>
             <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <p>Hey there! 👋 I'm Samuel, a passionate developer from Ethiopia. From backend frameworks like <strong>Flask, Django, and Express.js</strong> to frontend mastery with <strong>React</strong>, I build scalable digital solutions.</p>
-                    <p>I also specialize in desktop apps (Swing, Tkinter, Kivy) and hardware integration with Arduino. Outside of code, I'm a Real Madrid fan, a GTA 5 enthusiast, and a lover of all music genres—from Hip-Hop to Country.</p>
+                <div class="col-md-8 text-center mt-3">
+                    <p class="fs-5 text-secondary">I am a passionate developer based in Ethiopia, dedicated to building scalable digital solutions. With expertise ranging from deep backend architecture to polished frontend experiences, I transform complex problems into elegant software.</p>
                 </div>
             </div>
         </div>
@@ -57,36 +113,33 @@
 
     <section id="skills" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Technical Skills</h2>
-            <div class="row g-4">
+            <h2 class="text-center section-title">Technical Expertise</h2>
+            <div class="row g-4 mt-2">
                 <div class="col-md-4">
-                    <div class="card h-100 p-4">
-                        <h3><i class="fas fa-code text-primary"></i> Frontend</h3>
-                        <ul class="list-unstyled">
-                            <li>HTML5 / CSS3 / JavaScript</li>
-                            <li>React.js</li>
-                            <li>Bootstrap & Tailwind</li>
-                        </ul>
+                    <div class="card h-100 p-4 shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-code fa-2x text-primary me-3"></i>
+                            <h4 class="mb-0">Frontend</h4>
+                        </div>
+                        <p class="text-muted">Crafting responsive, user-centric interfaces using React, JavaScript (ES6+), and modern CSS frameworks like Tailwind.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 p-4">
-                        <h3><i class="fas fa-server text-success"></i> Backend</h3>
-                        <ul class="list-unstyled">
-                            <li>Node.js / Express.js</li>
-                            <li>Django / Flask</li>
-                            <li>Microservices Architecture</li>
-                        </ul>
+                    <div class="card h-100 p-4 shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-server fa-2x text-success me-3"></i>
+                            <h4 class="mb-0">Backend</h4>
+                        </div>
+                        <p class="text-muted">Architecting robust server-side logic with Node.js, Django, and Flask, focused on performance and security.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 p-4">
-                        <h3><i class="fas fa-paint-brush text-warning"></i> Others</h3>
-                        <ul class="list-unstyled">
-                            <li>Graphic Design</li>
-                            <li>Databases (PostgreSQL, MySQL)</li>
-                            <li>Arduino & IoT</li>
-                        </ul>
+                    <div class="card h-100 p-4 shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-mobile-alt fa-2x text-warning me-3"></i>
+                            <h4 class="mb-0">Mobile & IoT</h4>
+                        </div>
+                        <p class="text-muted">Developing cross-platform mobile apps and integrating hardware solutions via Arduino and IoT protocols.</p>
                     </div>
                 </div>
             </div>
@@ -95,70 +148,83 @@
 
     <section id="projects" class="py-5 bg-white">
         <div class="container">
-            <h2 class="text-center mb-5">Featured Projects</h2>
-            <div class="row g-4">
+            <h2 class="text-center section-title">Featured Projects</h2>
+            <div class="row g-4 mt-2">
                 <div class="col-md-4">
-                    <div class="card h-100">
+                    <div class="card h-100 overflow-hidden">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">Health Care Bot</h5>
-                            <p class="card-text">An AI-powered chatbot designed to provide initial medical consultations and symptom checking.</p>
+                            <h5 class="card-title fw-bold">Health Care Bot</h5>
+                            <p class="card-text text-muted">An AI-powered system providing symptom analysis and instant medical guidance.</p>
+                            <span class="badge bg-light text-dark border">Python</span>
+                            <span class="badge bg-light text-dark border">AI</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100">
+                    <div class="card h-100 overflow-hidden">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">Face Recognition Attendance</h5>
-                            <p class="card-text">A Python-based system using OpenCV to automate attendance tracking via facial recognition.</p>
+                            <h5 class="card-title fw-bold">Face Recognition</h5>
+                            <p class="card-text text-muted">Automated attendance system using OpenCV and deep learning for biometric security.</p>
+                            <span class="badge bg-light text-dark border">OpenCV</span>
+                            <span class="badge bg-light text-dark border">Security</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100">
+                    <div class="card h-100 overflow-hidden">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">Social Media App</h5>
-                            <p class="card-text">A full-stack social platform featuring real-time messaging, posts, and user interactions.</p>
+                            <h5 class="card-title fw-bold">Social Media App</h5>
+                            <p class="card-text text-muted">Real-time networking platform built for high-concurrency and user engagement.</p>
+                            <span class="badge bg-light text-dark border">Fullstack</span>
+                            <span class="badge bg-light text-dark border">Socket.io</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-5">
-                <a href="https://github.com/sami9644?tab=repositories" class="btn btn-outline-dark btn-lg" target="_blank">View More on GitHub</a>
+                <a href="https://github.com/sami9644?tab=repositories" class="btn btn-outline-dark" target="_blank">
+                    <i class="fab fa-github me-2"></i>Browse More Repositories
+                </a>
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Send me order here</h2>
+            <h2 class="text-center section-title">Work With Me</h2>
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <form action="https://formspree.io/f/xdalppjy" method="POST" class="card p-4 shadow-sm">
-                        <div class="mb-3">
-                            <label class="form-label">Your Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Message</label>
-                            <textarea name="message" class="form-control" rows="4" placeholder="Your order details for example i want a wordpress website for my business" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Send order</button>
-                    </form>
+                    <div class="card p-4 shadow-sm">
+                        <form action="https://formspree.io/f/xdalppjy" method="POST">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Email Address</label>
+                                <input type="email" name="email" class="form-control form-control-lg" placeholder="your@email.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Project Details</label>
+                                <textarea name="message" class="form-control" rows="5" placeholder="Describe your vision or project requirements..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Submit Request</button>
+                        </form>
+                    </div>
                     
                     <div class="mt-5 text-center">
-                        <ul class="list-inline">
-                            <li class="list-inline-item mx-3"><a href="https://github.com/sami9644" target="_blank" class="text-dark fs-3"><i class="fab fa-github"></i></a></li>
-                            <li class="list-inline-item mx-3"><a href="https://www.instagram.com/samuel_freelancer12/" target="_blank" class="text-danger fs-3"><i class="fab fa-instagram"></i></a></li>
-                            <li class="list-inline-item mx-3"><a href="mailto:ethiofreelancer96@gmail.com" class="text-primary fs-3"><i class="fas fa-envelope"></i></a></li>
-                        </ul>
+                        <p class="text-muted mb-4">Or reach out via social channels</p>
+                        <div class="d-flex justify-content-center gap-4">
+                            <a href="https://github.com/sami9644" target="_blank" class="text-dark fs-3"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/samuel_freelancer12/" target="_blank" class="text-danger fs-3"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:ethiofreelancer96@gmail.com" class="text-primary fs-3"><i class="fas fa-envelope"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.min.js"></script>
+    <footer class="py-4 text-center text-muted border-top">
+        <small>&copy; 2026 Samuel Getachew. All rights reserved.</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
